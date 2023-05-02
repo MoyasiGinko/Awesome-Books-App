@@ -31,39 +31,23 @@ const addBook = () => {
             title: title.value,
             author: author.value
         };
-
-        library.push(book);
-        console.log(library);
-        const books = document.querySelector("#books");
-        library.forEach(element => {
-            books.innerHTML = `
-            <div id="book-container">
-                <div class="book-items">
-                    <ul>
-                        <li><span>${element.title}<span>
-                            <span>${element.author}<span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        `;
-        });
         
+        library.push(book);
+
+        // CREATE BOOK USING DOM
+        const libraryContainer = document.getElementById("library-container");
+        library.forEach(book => {
+            const bookContainer = document.createElement('div');
+            bookContainer.id = 'book';
+            bookContainer.innerHTML = `
+                <ul id="book-items">
+                    <li>${book.title}</li>
+                    <li>${book.author}</li>
+                </ul>
+        `;
+            libraryContainer.appendChild(bookContainer);
+        });
     });
 };
 
 addBook();
-
-// const books = document.querySelector("#books");
-// for (var i =0; i<= library.length; i++) {
-//     books.innerHTML = `
-//     <div id="book-container">
-//         <div class="book-items">
-//             <ul>
-//                 <li><h2>${library[i].title}</h2></li>
-//             </ul>
-//         </div>
-//     </div>
-// `;
-// }
-
