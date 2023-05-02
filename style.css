@@ -9,3 +9,8 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+
+#main form  button[type=submit] {
+  background-color: red;
+  font-size: 1.5rem;
+}
