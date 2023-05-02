@@ -34,7 +34,36 @@ const addBook = () => {
 
         library.push(book);
         console.log(library);
+        const books = document.querySelector("#books");
+        library.forEach(element => {
+            books.innerHTML = `
+            <div id="book-container">
+                <div class="book-items">
+                    <ul>
+                        <li><span>${element.title}<span>
+                            <span>${element.author}<span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        `;
+        });
+        
     });
 };
 
 addBook();
+
+// const books = document.querySelector("#books");
+// for (var i =0; i<= library.length; i++) {
+//     books.innerHTML = `
+//     <div id="book-container">
+//         <div class="book-items">
+//             <ul>
+//                 <li><h2>${library[i].title}</h2></li>
+//             </ul>
+//         </div>
+//     </div>
+// `;
+// }
+
