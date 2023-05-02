@@ -13,6 +13,7 @@ root.innerHTML = `
         </div>
         <button type="submit" id="add-book">SUBMIT</button>
     </form>
+    <div id="library-container"></div>
 `;
 
 // STORE BOOKS
@@ -36,16 +37,28 @@ const addBook = () => {
 
         // CREATE BOOK USING DOM
         const libraryContainer = document.getElementById("library-container");
-        library.forEach(book => {
+        libraryContainer.innerHTML = '';
+        library.forEach((book, index) => {
             const bookContainer = document.createElement('div');
-            bookContainer.id = 'book';
+            bookContainer.id = `book-${index}`;
             bookContainer.innerHTML = `
                 <ul id="book-items">
                     <li>${book.title}</li>
                     <li>${book.author}</li>
+                    <button type="button" id="remove-book">REMOVE</button>
                 </ul>
-        `;
-            libraryContainer.appendChild(bookContainer);
+            `;
+            libraryContainer.appendChild(bookContainer);     
+        });
+
+        // ADD REMOVE BUTTON FUNCTIONALITY
+        const removeButtons = document.querySelectorAll('#remove-book');
+        removeButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                library.splice(index, 1);
+                const bookContainer = document.getElementById(`book-${index}`);
+                bookContainer.remove();
+            });
         });
     });
 };
