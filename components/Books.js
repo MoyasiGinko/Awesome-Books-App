@@ -5,16 +5,16 @@ class Books {
   #library;
   #root;
 
-  constructor() {
-    // Initialize fields
-    this.#root = document.querySelector("#main");
-    this.#library = [];
-    this.createForm();
-    this.addBook();
-    this.deleteBook();
-    this.saveLibrary();
-    this.render();
-  }
+constructor() {
+  this.#root = document.querySelector("#main");
+  this.#library = JSON.parse(localStorage.getItem("library")) || [];
+  this.createForm();
+  this.addBook();
+  this.deleteBook();
+  this.render();
+  this.saveLibrary();
+}
+
 
   createForm = () => {
     this.#root.innerHTML = `
