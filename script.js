@@ -1,5 +1,4 @@
-// GENERATE MAIN SECTION
-const root = document.querySelector("#main");
+const root = document.querySelector('#main');
 
 root.innerHTML = `
     <form id="form-container">
@@ -16,51 +15,59 @@ root.innerHTML = `
     <div id="library-container"></div>
 `;
 
-// STORE BOOKS
-const library = [];
+let library = [];
 
-// ADD BOOK
-const addBook = () => {
-    const form = document.querySelector('form');
+const manageBooks = () => {
+  const form = document.querySelector('form');
+  const { title, author } = form.elements;
 
-    // STORE DATA
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const { title, author } = form.elements;
-        const book = {
-            title: title.value,
-            author: author.value
-        };
-        
-        library.push(book);
-
-        // CREATE BOOK USING DOM
-        const libraryContainer = document.getElementById("library-container");
-        libraryContainer.innerHTML = '';
-        library.forEach((book, index) => {
-            const bookContainer = document.createElement('div');
-            bookContainer.id = `book-${index}`;
-            bookContainer.innerHTML = `
+  const renderLibrary = () => {
+    const libraryContainer = document.getElementById('library-container');
+    libraryContainer.innerHTML = '';
+    library.forEach((book, index) => {
+      const bookContainer = document.createElement('div');
+      bookContainer.id = `book-${index}`;
+      bookContainer.innerHTML = `
                 <ul id="book-items">
                     <li>${book.title}</li>
                     <li>${book.author}</li>
                     <button type="button" id="remove-book">REMOVE</button>
                 </ul>
             `;
-            libraryContainer.appendChild(bookContainer);     
-        });
+      libraryContainer.appendChild(bookContainer);
 
-        // ADD REMOVE BUTTON FUNCTIONALITY
-        const removeButtons = document.querySelectorAll('#remove-book');
-        removeButtons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                library.splice(index, 1);
-                const bookContainer = document.getElementById(`book-${index}`);
-                bookContainer.remove();
-            });
-        });
+      const removeButton = bookContainer.querySelector('#remove-book');
+      removeButton.addEventListener('click', () => {
+        library.splice(index, 1);
+        // eslint-disable-next-line no-use-before-define
+        saveLibrary();
+        renderLibrary();
+      });
     });
+  };
+
+  const data = localStorage.getItem('library');
+  if (data !== null) {
+    library = JSON.parse(data);
+    renderLibrary();
+  }
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const book = {
+      title: title.value,
+      author: author.value,
+    };
+
+    library.push(book);
+    // eslint-disable-next-line no-use-before-define
+    saveLibrary();
+    renderLibrary();
+  });
+
+  const saveLibrary = () => {
+    localStorage.setItem('library', JSON.stringify(library));
+  };
 };
 
-addBook();
+manageBooks();
