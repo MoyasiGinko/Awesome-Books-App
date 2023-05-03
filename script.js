@@ -15,6 +15,10 @@ root.innerHTML = `
     <div id="library-container"></div>
 `;
 
+const saveLibrary = () => {
+    localStorage.setItem('library', JSON.stringify(library));
+  };
+
 let library = [];
 
 const manageBooks = () => {
@@ -62,10 +66,6 @@ const manageBooks = () => {
     saveLibrary();
     renderLibrary();
   });
-
-  const saveLibrary = () => {
-    localStorage.setItem('library', JSON.stringify(library));
-  };
 };
 
 manageBooks();
