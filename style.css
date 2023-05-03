@@ -14,3 +14,46 @@ body {
   background-color: red;
   font-size: 1.5rem;
 }
+
+h1,
+#library-container,
+#main {
+  text-align: center;
+}
+
+#library-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
+}
+
+h1 {
+  margin: 0.5rem;
+}
+
+.book-items {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  background-color: gray;
+}
+
+.remove-book {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1.5rem 0.5rem;
+  border: 3px solid black;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input {
+  padding: 0.3rem;
+}
