@@ -3,18 +3,39 @@
 class Books {
   // Declare private field
   #library;
+  #root;
 
   constructor() {
     // Initialize fields
+    this.#root = document.querySelector("#main");
     this.#library = [];
+    this.createForm();
     this.addBook();
     this.deleteBook();
     this.saveLibrary();
+    this.render();
   }
+
+  createForm = () => {
+    this.#root.innerHTML = `
+    <form id="form-container">
+        <div class="form-items">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control">
+        </div>
+        <div class="form-items">
+            <label for="author">Author</label>
+            <input type="text" id="author" class="form-control">
+        </div>
+        <button type="submit" id="add-book">SUBMIT</button>
+    </form>
+    <div id="library-container"></div>
+`;
+  };
 
   addBook = () => {
     const form = document.querySelector("#form-container");
-    
+
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
