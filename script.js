@@ -39,7 +39,6 @@ const manageBooks = () => {
       const removeButton = bookContainer.querySelector('#remove-book');
       removeButton.addEventListener('click', () => {
         library.splice(index, 1);
-        // eslint-disable-next-line no-use-before-define
         saveLibrary();
         renderLibrary();
       });
@@ -60,7 +59,6 @@ const manageBooks = () => {
     };
 
     library.push(book);
-    // eslint-disable-next-line no-use-before-define
     saveLibrary();
     renderLibrary();
   });
