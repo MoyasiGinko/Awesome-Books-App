@@ -57,6 +57,25 @@ class Books {
       localStorage.setItem("library", JSON.stringify(this.#library));
     });
   };
+
+  render = () => {
+    const libraryContainer = document.getElementById("library-container");
+    libraryContainer.innerHTML = "";
+
+    this.#library.forEach((book, index) => {
+      const bookContainer = document.createElement("div");
+      bookContainer.classList.add("book");
+      bookContainer.innerHTML = `
+        <ul class="book-items">
+          <li class="book-title">${book.title}</li>
+          <li class="book-author">${book.author}</li>
+          <button type="button" class="remove-book" data-index="${index}">Remove</button>
+        </ul>
+      `;
+
+      libraryContainer.appendChild(bookContainer);
+    });
+  };
 }
 
 export default Books;
