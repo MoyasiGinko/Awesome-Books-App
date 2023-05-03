@@ -21,13 +21,13 @@ constructor() {
     <form id="form-container">
         <div class="form-items">
             <label for="title">Title</label>
-            <input type="text" id="title" class="form-control">
+            <input type="text" id="title" class="form-control" placeholder="Title">
         </div>
         <div class="form-items">
             <label for="author">Author</label>
-            <input type="text" id="author" class="form-control">
+            <input type="text" id="author" class="form-control" placeholder="Author">
         </div>
-        <button type="submit" id="add-book">SUBMIT</button>
+        <button type="submit" id="add-book">Add</button>
     </form>
     <div id="library-container"></div>
 `;
