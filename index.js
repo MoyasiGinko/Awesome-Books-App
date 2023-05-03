@@ -1,5 +1,5 @@
 /* eslint-disable */
 
-import Books from "../awesomebooks/components/Books";
+import Books from "./components/Books.js";
 
 new Books();
