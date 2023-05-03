@@ -30,41 +30,33 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Awesome Books <a name="about-project"></a>
 
->  The project in this repository is the first one in Microverse 2 module.
-
-**Awesome Books** In this project, we build a basic website that allows users to add/remove books from a list. 
+**Awesome Books** In this project, we build a basic website that allows users to add/remove books from a list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> We used vanilla HTML, CSS, and JavaScript. 
+> We used vanilla HTML, CSS, and JavaScript.
 
 <details>
-  <summary>Client</summary>
+  <summary>Languages and technologies</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="#">HTML</a></li>
   </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <ul>
+    <li><a href="#">CSS3</a></li>
   </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <ul>
+    <li><a href="#">VScode</a></li>
+  </ul>
+    <ul>
+    <li><a href="#">Git and GitHub</a></li>
   </ul>
 </details>
 
@@ -82,7 +74,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Checkout the project 👇 
+> Checkout the project 👇
 
 - [Live Demo Link](https://wwwdrt.github.io/awesomebooks/)
 
@@ -92,13 +84,13 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> You can add your favorite books in and store them locally. 
+> You can add your favorite books in and store them locally.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need NPM.
+In order to run this project you need GitHub account and a text editor.
 
 <!--
 Example command:
@@ -112,63 +104,49 @@ choco install npm -y
 
 Clone this repository to your desired folder:
 
-<!--
 Example commands:
 
 ```sh
   cd my-folder
   git clone https://github.com/wwwdrt/awesomebooks.git 
 ```
---->
+
+-
 
 ### Install
 
 Install this project with:
 
-<!--
+N/A
+
 Example command:
 
 ```sh
   cd my-project
   npm install
 ```
---->
+
+-
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-npm run dev
-```
---->
+N/A
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+N/A
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
 Example:
 
 ```sh
 GitHub pages
 ```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,23 +206,6 @@ Feel free to check the [issues page](../../issues/).
 
 > Thanks to Microverse for the amazing curriculum.
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
@@ -252,7 +213,5 @@ Feel free to check the [issues page](../../issues/).
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
