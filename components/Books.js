@@ -64,7 +64,7 @@ class Books {
     const libraryContainer = document.getElementById("library-container");
 
     libraryContainer.addEventListener("click", (event) => {
-      if (event.target.id === "remove-book") {
+      if (event.target.classList.contains("remove-book")) {
         const bookIndex = event.target.dataset.index;
         this.#library.splice(bookIndex, 1);
 
