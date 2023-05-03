@@ -31,13 +31,13 @@ const manageBooks = () => {
     library.forEach((book, index) => {
       const bookContainer = document.createElement('div');
       bookContainer.id = `book-${index}`;
-        bookContainer.innerHTML = `
-                  <ul id="book-items">
-                      <li>${book.title}</li>
-                      <li>${book.author}</li>
-                      <button type="button" id="remove-book">REMOVE</button>
-                  </ul>
-              `;
+      bookContainer.innerHTML = `
+                <ul id="book-items">
+                    <li>${book.title}</li>
+                    <li>${book.author}</li>
+                    <button type="button" id="remove-book">REMOVE</button>
+                </ul>
+            `;
       libraryContainer.appendChild(bookContainer);
       const removeButton = bookContainer.querySelector('#remove-book');
       removeButton.addEventListener('click', () => {
@@ -56,6 +56,11 @@ const manageBooks = () => {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (title.value.trim() === '' || author.value.trim() === '') {
+      alert('Please fill in both the title and author fields.');
+      return;
+    }
+
     const book = {
       title: title.value,
       author: author.value,
@@ -64,6 +69,7 @@ const manageBooks = () => {
     library.push(book);
     saveLibrary();
     renderLibrary();
+    form.reset();
   });
 };
 
