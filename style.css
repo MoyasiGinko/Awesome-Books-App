@@ -4,6 +4,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -54,9 +56,6 @@ h2 {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  text-decoration: none;
-  box-sizing: border-box;
-  list-style: none;
   margin: 0.4rem;
   padding: 0.5rem;
 }
@@ -114,4 +113,37 @@ label {
 .dash {
   display: flex;
   justify-content: center;
+}
+
+.nav-hr {
+  width: 2px;
+  background-color: black;
+  height: 1.2rem;
+}
+
+#date {
+  margin-bottom: 2rem;
+  align-self: end;
+  margin-top: 0.4rem;
+  margin-right: 2px;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 4px solid black;
+  border-radius: 4px;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+#nav-links {
+  display: flex;
+  gap: 0.5rem;
 }
