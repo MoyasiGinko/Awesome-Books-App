@@ -49,7 +49,7 @@ h2,
 }
 
 h2 {
-  margin: 0.5rem;
+  margin: 0.5rem 0 1.2rem;
 }
 
 .book-items {
@@ -83,7 +83,7 @@ label {
 }
 
 #form-container {
-  margin-top: 20px;
+  margin-top: 3rem;
 }
 
 .book:nth-child(odd) {
@@ -96,6 +96,7 @@ label {
   margin-right: 5px;
   border-radius: 4px;
   display: none;
+  margin-bottom: 1.2rem;
 }
 
 .dash hr {
@@ -155,8 +156,26 @@ label {
 .copyright {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   border: 4px solid black;
   padding: 16px;
   margin: 4px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-items: center;
+  margin: 2rem 0 4rem;
+}
+
+#contact p {
+  margin: 1rem;
+}
+
+#contact ul li:first-child,
+#contact ul li:nth-of-type(2),
+#contact ul li:last-child {
+  list-style: disc;
 }
