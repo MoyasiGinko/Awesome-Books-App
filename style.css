@@ -148,6 +148,10 @@ label {
   gap: 0.5rem;
 }
 
+#nav-links li {
+  cursor: pointer;
+}
+
 .copyright {
   display: flex;
   flex-direction: column;
