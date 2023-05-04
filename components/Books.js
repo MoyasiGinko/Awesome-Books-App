@@ -4,15 +4,31 @@ class Books {
   // Declare private field
   #library;
   #root;
+  #list;
+  #addBook;
+  #contact;
+  #listContainer;
+  #addContainer;
+  #contactContainer;
 
 constructor() {
   this.#root = document.querySelector("#main");
   this.#library = JSON.parse(localStorage.getItem("library")) || [];
+  this.#list = document.querySelectorAll("#nav-links li")[0];
+  this.#addBook = document.querySelectorAll("#nav-links li")[1];
+  this.#contact = document.querySelectorAll("#nav-links li")[2];
+  this.#listContainer = document.getElementById("list-container");
+  this.#addContainer = document.getElementById("main");
+  this.#contactContainer = document.getElementById("contact");
   this.createForm();
   this.addBook();
   this.deleteBook();
   this.render();
   this.saveLibrary();
+  this.hideNavLinks();
+  this.addNav();
+  this.listNav()
+  this.contactNav();
 }
 
 
@@ -57,6 +73,7 @@ constructor() {
       author.value = "";
 
       this.render();
+      this.#listContainer.style.display = "none";
     });
   };
 
@@ -94,12 +111,58 @@ constructor() {
           <button type="button" class="remove-book" data-index="${index}">Remove</button>
         </ul>
       `;
-      
+
       if (this.#library.length !== 0) {
         border.style.display = 'block';
       }
       libraryContainer.appendChild(bookContainer);
     });
+  };
+
+  // SPA METHODS
+
+  hideNavLinks = () => {
+    this.#addContainer.style.display = "none";
+    this.#contactContainer.style.display = "none";
+  };
+
+  addNav = () => {
+    this.#addBook.addEventListener('click', () => {
+      this.#listContainer.style.display = "none";
+      this.#addContainer.style.display = "flex";
+      this.#contactContainer.style.display = "none";
+      const update = document.querySelector('#header h2');
+      update.textContent = 'Add a new book';
+    })
+  };
+
+  listNav = () => {
+    this.#list.addEventListener('click', () => {
+      this.#listContainer.style.display = "flex";
+      this.#addContainer.style.display = "none";
+      this.#contactContainer.style.display = "none";
+      const update = document.querySelector('#header h2');
+      update.textContent = 'All awesome books';
+    })
+  };
+
+  contactNav = () => {
+    this.#contact.addEventListener('click', () => {
+      this.#listContainer.style.display = "none";
+      this.#addContainer.style.display = "none";
+      this.#contactContainer.style.display = "flex";
+      const update = document.querySelector('#header h2');
+      update.textContent = 'Contact information';
+    })
+
+    this.#contactContainer.innerHTML = `
+            <p>Do have any questions or you just want to say "Hello"? <br> You can reach out to us!</p>
+            <ul>
+                <li>Our e-mail: mail@mail.com</li>
+                <li>Our phone number: 004358653442</li>
+                <li>Our address: Streetname 22, 84503 City, Country</li>
+            </ul>
+    `
   };
 }
 
