@@ -29,6 +29,7 @@ body {
   border: 4px solid black;
   margin-left: auto;
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 
 h1,
