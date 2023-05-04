@@ -19,23 +19,24 @@ contactContainer.style.display = "none";
 
 // Show the add container 
 addNav.addEventListener("click", () => {
-  listContainer.style.display = "none";
-  addContainer.style.display = "block";
-  contactContainer.style.display = "none";
-});
+    listContainer.style.display = "none";
+    addContainer.style.display = "block";
+    contactContainer.style.display = "none";
+  });
 
 // Show the list container 
 listNav.addEventListener("click", () => {
-  addContainer.style.display = "none";
-  contactContainer.style.display = "none";
-});
+    listContainer.style.display = "block";
+    addContainer.style.display = "none";
+    contactContainer.style.display = "none";
+  });
 
 // Show the contact
 contactNav.addEventListener("click", () => {
-  listContainer.style.display = "none";
-  addContainer.style.display = "none";
-  contactContainer.style.display = "block";
-});
+    listContainer.style.display = "none";
+    addContainer.style.display = "none";
+    contactContainer.style.display = "block";
+  });
 
 books.render();
 
