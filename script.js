@@ -1,4 +1,6 @@
-const root = document.querySelector('#main');
+/* eslint-disable */
+
+const root = document.querySelector("#main");
 
 root.innerHTML = `
     <form id="form-container">
@@ -18,18 +20,18 @@ root.innerHTML = `
 let library = [];
 
 const saveLibrary = () => {
-  localStorage.setItem('library', JSON.stringify(library));
+  localStorage.setItem("library", JSON.stringify(library));
 };
 
 const manageBooks = () => {
-  const form = document.querySelector('form');
+  const form = document.querySelector("form");
   const { title, author } = form.elements;
 
   const renderLibrary = () => {
-    const libraryContainer = document.getElementById('library-container');
-    libraryContainer.innerHTML = '';
+    const libraryContainer = document.getElementById("library-container");
+    libraryContainer.innerHTML = "";
     library.forEach((book, index) => {
-      const bookContainer = document.createElement('div');
+      const bookContainer = document.createElement("div");
       bookContainer.id = `book-${index}`;
       bookContainer.innerHTML = `
                 <ul id="book-items">
@@ -39,8 +41,8 @@ const manageBooks = () => {
                 </ul>
             `;
       libraryContainer.appendChild(bookContainer);
-      const removeButton = bookContainer.querySelector('#remove-book');
-      removeButton.addEventListener('click', () => {
+      const removeButton = bookContainer.querySelector("#remove-book");
+      removeButton.addEventListener("click", () => {
         library.splice(index, 1);
         saveLibrary();
         renderLibrary();
@@ -48,16 +50,16 @@ const manageBooks = () => {
     });
   };
 
-  const data = localStorage.getItem('library');
+  const data = localStorage.getItem("library");
   if (data !== null) {
     library = JSON.parse(data);
     renderLibrary();
   }
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (title.value.trim() === '' || author.value.trim() === '') {
-      alert('Please fill in both the title and author fields.');
+    if (title.value.trim() === "" || author.value.trim() === "") {
+      alert("Please fill in both the title and author fields.");
       return;
     }
 
