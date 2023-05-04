@@ -81,6 +81,8 @@ constructor() {
 
   render = () => {
     const libraryContainer = document.getElementById("library-container");
+    const border = document.getElementById("list-container");
+    border.style.display = 'none';
     libraryContainer.innerHTML = "";
 
     this.#library.forEach((book, index) => {
@@ -88,12 +90,14 @@ constructor() {
       bookContainer.classList.add("book");
       bookContainer.innerHTML = `
         <ul class="book-items">
-          <li class="book-title">${book.title}</li>
-          <li class="book-author">${book.author}</li>
+          <li class="book-title">"${book.title}" by ${book.author}</li>
           <button type="button" class="remove-book" data-index="${index}">Remove</button>
         </ul>
       `;
-
+      
+      if (this.#library.length !== 0) {
+        border.style.display = 'block';
+      }
       libraryContainer.appendChild(bookContainer);
     });
   };
