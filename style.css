@@ -32,7 +32,7 @@ body {
   margin-bottom: 2rem;
 }
 
-h1,
+h2,
 #library-container,
 #main {
   text-align: center;
@@ -46,7 +46,7 @@ h1,
   margin: auto;
 }
 
-h1 {
+h2 {
   margin: 0.5rem;
 }
 
