@@ -156,7 +156,7 @@ GitHub pages
 
 > Meet the creators of awesomebooks 😎
 
-👤 **DRT*
+👤 *DRT*
 
 - GitHub: [@wwwdrt](https://github.com/wwwdrt)
 - Twitter: [@drtcode](https://twitter.com/drtcode)
@@ -165,7 +165,7 @@ GitHub pages
 👤 **Moyasi**
 
 - GitHub: [@MoyasiGinko](https://github.com/MoyasiGinko)
-- Twitter: [@twitterhandle](https://twitter.com/moyasi_ginko)
+- Twitter: [@MoyasiGinko](https://twitter.com/moyasi_ginko)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahmudur-rahman-a8a151257)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
