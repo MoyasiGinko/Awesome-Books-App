@@ -4,6 +4,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -32,7 +34,7 @@ body {
   margin-bottom: 2rem;
 }
 
-h1,
+h2,
 #library-container,
 #main {
   text-align: center;
@@ -46,17 +48,14 @@ h1,
   margin: auto;
 }
 
-h1 {
-  margin: 0.5rem;
+h2 {
+  margin: 0.5rem 0 1.2rem;
 }
 
 .book-items {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  text-decoration: none;
-  box-sizing: border-box;
-  list-style: none;
   margin: 0.4rem;
   padding: 0.5rem;
 }
@@ -84,7 +83,7 @@ label {
 }
 
 #form-container {
-  margin-top: 20px;
+  margin-top: 3rem;
 }
 
 .book:nth-child(odd) {
@@ -97,6 +96,7 @@ label {
   margin-right: 5px;
   border-radius: 4px;
   display: none;
+  margin-bottom: 1.2rem;
 }
 
 .dash hr {
@@ -114,4 +114,68 @@ label {
 .dash {
   display: flex;
   justify-content: center;
+}
+
+.nav-hr {
+  width: 2px;
+  background-color: black;
+  height: 1.2rem;
+}
+
+#date {
+  margin-bottom: 2rem;
+  align-self: end;
+  margin-top: 0.4rem;
+  margin-right: 2px;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 4px solid black;
+  border-radius: 4px;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+#nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#nav-links li {
+  cursor: pointer;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 4px solid black;
+  padding: 16px;
+  margin: 4px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-items: center;
+  margin: 2rem 0 4rem;
+}
+
+#contact p {
+  margin: 1rem;
+}
+
+#contact ul li:first-child,
+#contact ul li:nth-of-type(2),
+#contact ul li:last-child {
+  list-style: disc;
 }
