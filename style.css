@@ -153,10 +153,15 @@ label {
 }
 
 .copyright {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   border: 4px solid black;
   padding: 16px;
   margin: 4px;
+  display: flex;
+  align-items: flex-start;
 }
+
+#library-tsx {
+  height: 100vh;
+}
+
