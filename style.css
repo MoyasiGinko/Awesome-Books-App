@@ -31,7 +31,6 @@ body {
   cursor: pointer;
 }
 
-
 h1,
 #library-container,
 #main {
@@ -88,7 +87,7 @@ label {
 }
 
 .book:nth-child(odd) {
-  background-color: rgb(212,209,209);
+  background-color: rgb(212, 209, 209);
 }
 
 #list-container {
@@ -100,7 +99,6 @@ label {
 }
 
 .dash hr {
-  background-color: black;
   width: 140px;
   height: 4px;
   border: none;
@@ -109,11 +107,10 @@ label {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-width: 10px;
-  background: linear-gradient(to right, #fff, #000, #fff);
+  background: black linear-gradient(to right, #fff, #000, #fff);
 }
 
 .dash {
   display: flex;
   justify-content: center;
 }
-
